@@ -6,6 +6,9 @@
 #include <vector>
 #include "listener.h"
 
+
+typedef Notifier;
+
 class Notifier
 {
 public:
