@@ -9,7 +9,7 @@
 
 typedef Notifier;
 
-class Notifier
+abstract class Notifier
 {
 public:
 	virtual void RegisterListener(Listener *listener);

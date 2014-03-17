@@ -34,7 +34,7 @@ public:
 	AnimatedTile(std::vector<sf::Texture*> textures, sf::Vector2<float> position, Notifier* notifier);
 	void setTextures(std::vector<sf::Texture*> textures);
 	const std::vector<sf::Texture*> getTextures() const;
-	virtual void getNotification(const Notifier* notifier);
+	virtual void getNotification(const Notifier* notifier) = 0;
 
 protected:
 	std::vector<sf::Texture*> _textures;
@@ -45,7 +45,7 @@ private:
 	const sf::Texture* getTexture() const;
 };
 
-class MonoAnimationTile : Tile, AnimatedTile, Listener
+class MonoAnimationTile : AnimatedTile
 {
 public:
 	MonoAnimationTile();

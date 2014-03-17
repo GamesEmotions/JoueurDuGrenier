@@ -1,9 +1,10 @@
 #ifndef INCLUDE_LISTENER
 #define INCLUDE_LISTENER
 
-
 #include "notifier.h"
 
+
+typedef Listener;
 
 class Listener
 {

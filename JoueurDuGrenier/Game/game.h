@@ -3,28 +3,30 @@
 
 //Error codes start by 6000
 
-#include <SFML/Graphics.hpp>
-#include "../ResourceManager/imagesManager.h"
-#include "../ResourceManager/soundsManager.h"
-#include "../ResourceManager/filesManager.h"
-#include "Menu/menu.h"
+#include "SFML/Graphics.hpp"
+#include "SFML/System/Time.hpp"
+#include "../ResourceHolder/resourceHolder.h"
 
 
-static class Game
+class Game
 {
 private:
-	Game(sf::RenderWindow* frame);
-	~Game();
-	static Game* _singleton;
-	static sf::RenderWindow* _frame;
+	void processEvents();
+		void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
+			bool _isMovingUp;
+			bool _isMovingLeft;
+			bool _isMovingRight;
+			bool _isMovingDown;
+	void update(sf::Time dt);
+	void render();
+
+	sf::RenderWindow _window;
+	sf::Texture _texture;
+	sf::Sprite _player;
 
 public:
-	static Game* getInstance();
-	static Game* newInstance(sf::RenderWindow* frame);
-	static sf::RenderWindow* getFrame();
-	static void Run();
-
-	static bool Running;
+	Game();
+	void run();
 };
 
 #endif

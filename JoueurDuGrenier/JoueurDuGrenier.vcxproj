@@ -84,31 +84,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="entity.cpp" />
     <ClCompile Include="Game\game.cpp" />
-    <ClCompile Include="Game\Ingame objects\tile.cpp" />
-    <ClCompile Include="Game\Menu\drawable.cpp" />
-    <ClCompile Include="Game\Menu\menu.cpp" />
-    <ClCompile Include="Game\notifier.cpp" />
-    <ClCompile Include="Game\time.cpp" />
-    <ClCompile Include="JdgExceptions.cpp" />
-    <ClCompile Include="ResourceManager\filesManager.cpp" />
-    <ClCompile Include="ResourceManager\imagesManager.cpp" />
-    <ClCompile Include="ResourceManager\soundsManager.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="start.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="baseProperty.h" />
+    <ClInclude Include="controller.h" />
+    <ClInclude Include="entity.h" />
     <ClInclude Include="Game\game.h" />
-    <ClInclude Include="Game\Ingame objects\tile.h" />
-    <ClInclude Include="Game\listener.h" />
-    <ClInclude Include="Game\Menu\drawable.h" />
-    <ClInclude Include="Game\Menu\menu.h" />
-    <ClInclude Include="Game\notifier.h" />
-    <ClInclude Include="Game\time.h" />
-    <ClInclude Include="JdgExceptions.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="property.h" />
+    <ClInclude Include="ResourceHolder\resourceHolder.h" />
     <ClInclude Include="ResourceManager\dirent.h" />
-    <ClInclude Include="ResourceManager\filesManager.h" />
-    <ClInclude Include="ResourceManager\imagesManager.h" />
-    <ClInclude Include="ResourceManager\soundsManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResourceHolder\resourceHolder.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
